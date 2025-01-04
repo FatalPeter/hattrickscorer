@@ -1,7 +1,7 @@
 <?php
 //dati di configurazione del database
 //produzione
-$db = mysqli_connect("localhost", "user", "password", "hattrickscorer");
+$db = mysqli_connect("localhost", "scorer", "6SgTBg8ypsZ2LRjvsOul", "hattrickscorer");
 
 
 if (!$db) {

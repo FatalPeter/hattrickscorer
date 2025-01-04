@@ -1,16 +1,18 @@
 <?php
 
 	//script di registrazione ad Hattrick Scorer
+        echo "1";
 	require 'engine/database.php';
+        echo "2";
 	$post = $_POST;
 	//innanzi tutto il captcha...	
-	if($post["g-recaptcha-response"] != "") //posso verificare
-	{
-		$secret = '6LerAxYUAAAAAFdR5Dod4ruT5o9h2_fqqdNhMb9C';
+	//if($post["g-recaptcha-response"] != "") //posso verificare
+	//{
+		$secret = '6LfW3FAqAAAAAK776-GFEm4rdbmsgiea4lOa3cMs';
 		$verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$post['g-recaptcha-response']);
 		$responseData = json_decode($verifyResponse);
-		if($responseData->success) //captcha verificato
-		{
+		//if($responseData->success) //captcha verificato
+		//{
 			//posso registrare l'utente!
 			//ma prima verifico che non ci sia già la mail registrata
 			
@@ -35,16 +37,16 @@
 					header("Location: index.php?code=3");
 				}
 			}			
-		}
-		else //problemi sul captcha..
-		{
-			header("Location: index.php?code=0");
-		}
-	}
-	else //manca il click sul captcha
-	{
-		header("Location: index.php?code=0");
-	}
+		//}
+		//else //problemi sul captcha..
+		//{
+		//	header("Location: index.php?code=0");
+		//}
+	//}
+	//else //manca il click sul captcha
+	//{
+	//	header("Location: index.php?code=0");
+	//}
 
 	
 	

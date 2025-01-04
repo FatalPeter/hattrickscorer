@@ -99,12 +99,44 @@ class Senior extends Xml\HTSupporter
     /**
      * Return player's team name
      *
-     * @return integer
+     * @return string
      */
     public function getTeamName()
     {
         $xpath = new \DOMXPath($this->getXml());
         return $xpath->query('//OwningTeam/TeamName')->item(0)->nodeValue;
+    }
+
+    /**
+     * Return player's mother team id
+     *
+     * @return integer
+     */
+    public function getMotherTeamId()
+    {
+        $xpath = new \DOMXPath($this->getXml());
+        return $xpath->query('//MotherClub/TeamID')->item(0)->nodeValue;
+    }
+
+    /**
+     * Return player's mother team
+     *
+     * @return \PHT\Xml\Team\Senior
+     */
+    public function getMotherTeam()
+    {
+        return Wrapper\Team\Senior::team($this->getMotherTeamId());
+    }
+
+    /**
+     * Return player's mother team name
+     *
+     * @return string
+     */
+    public function getMotherTeamName()
+    {
+        $xpath = new \DOMXPath($this->getXml());
+        return $xpath->query('//MotherClub/TeamName')->item(0)->nodeValue;
     }
 
     /**
@@ -486,7 +518,7 @@ class Senior extends Xml\HTSupporter
      */
     public function isSkillsAvailable()
     {
-        return $this->getXml()->getElementsByTagName('PlayerSkills')->item(0)->hasChildNodes();
+        return $this->getXml()->getElementsByTagName('PlayerSkills')->item(0)->childNodes->length > 1;
     }
 
     /**
@@ -631,6 +663,19 @@ class Senior extends Xml\HTSupporter
     }
 
     /**
+     * Return trainer
+     *
+     * @return Xml\Team\Staff\Trainer
+     */
+    public function getTrainer()
+    {
+        if ($this->isTrainer()) {
+            return Wrapper\Team\Senior::staff($this->getTeamId())->getTrainer();
+        }
+        return null;
+    }
+
+    /**
      * Return player trainer type
      *
      * @return integer
@@ -644,14 +689,14 @@ class Senior extends Xml\HTSupporter
     }
 
     /**
-     * Return player trainer skill
+     * Return player trainer skill level
      *
      * @return integer
      */
     public function getTrainerSkill()
     {
         if ($this->isTrainer()) {
-            return $this->getXml()->getElementsByTagName('TrainerSkill')->item(0)->nodeValue;
+            return $this->getXml()->getElementsByTagName('TrainerSkillLevel')->item(0)->nodeValue;
         }
         return null;
     }
@@ -797,6 +842,16 @@ class Senior extends Xml\HTSupporter
     public function getGoalsInTeam()
     {
         return $this->getXml()->getElementsByTagName('GoalsCurrentTeam')->item(0)->nodeValue;
+    }
+
+    /**
+     * Return player number matches in his team
+     *
+     * @return integer
+     */
+    public function getMatchesInTeam()
+    {
+        return $this->getXml()->getElementsByTagName('MatchesCurrentTeam')->item(0)->nodeValue;
     }
 
     /**

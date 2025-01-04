@@ -3,20 +3,22 @@
 	require 'engine/database.php';
 	require_once 'engine/PHT/autoload.php';
 	
-	
 	/* ============================================================ */
 	function requireAccess($userId,$db,$userCode)
 	{
-		
+		require 'engine/private.php';
+		require 'engine/global.php';
 		$config = array(
-			'CONSUMER_KEY' => 'Vrpq4zIU78ySwlrFMvo4nY',
-			'CONSUMER_SECRET' => 'dXbNHNqkQlBKZ5dHakJyIojFjvYCFHlukUTjJVkSaNy'
+                        'CONSUMER_KEY' => $CHPP_CONSUMER_KEY,
+                        'CONSUMER_SECRET' => $CHPP_CONSUMER_SECRET,
+	                'MEMCACHED_SERVER_IP' => $GLOBAL_MEMCACHED_SERVER_IP,
+	                'MEMCACHED_SERVER_PORT' => $GLOBAL_MEMCACHED_SERVER_PORT
 		);
 		
 		$HT = new \PHT\Connection($config);
 		
 		//produzione
-		$auth = $HT->getPermanentAuthorization('http://www.hattrickscorer.com/engine/auth.php?userCode='.$userCode); // put your own url :)
+		$auth = $HT->getPermanentAuthorization('https://www.hattrickscorer.eu/engine/auth.php?userCode='.$userCode); // put your own url :)
 		//sviluppo
 		//$auth = $HT->getPermanentAuthorization('http://dev.hattrickscorer.com/engine/auth.php?userCode='.$userCode); // put your own url :)
 		

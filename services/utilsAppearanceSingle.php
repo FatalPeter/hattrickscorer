@@ -1,6 +1,6 @@
 <?php
 
-	define(DATE_FORMAT, "Y-m-d");
+	define("DATE_FORMAT", "Y-m-d");
 		
 	/* funzioni di utilità del servizio */
 	

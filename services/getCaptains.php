@@ -39,9 +39,13 @@
     }
 	
 	//provo a fare una richiesta
+	require '../engine/private.php';
+	require '../engine/global.php';
 	$config = array(
-		'CONSUMER_KEY' => 'Vrpq4zIU78ySwlrFMvo4nY',
-		'CONSUMER_SECRET' => 'dXbNHNqkQlBKZ5dHakJyIojFjvYCFHlukUTjJVkSaNy',
+		'CONSUMER_KEY' => $CHPP_CONSUMER_KEY,
+		'CONSUMER_SECRET' => $CHPP_CONSUMER_SECRET,
+		'MEMCACHED_SERVER_IP' => $GLOBAL_MEMCACHED_SERVER_IP,
+		'MEMCACHED_SERVER_PORT' => $GLOBAL_MEMCACHED_SERVER_PORT,
 		'OAUTH_TOKEN' => $authParams["oauth_token"],
 		'OAUTH_TOKEN_SECRET' => $authParams["oauth_token_secret"]
 	);

@@ -46,9 +46,13 @@
     }
 	
 	//provo a fare una richiesta
+	require 'engine/private.php';
+	require 'engine/global.php';
 	$config = array(
-		'CONSUMER_KEY' => 'Vrpq4zIU78ySwlrFMvo4nY',
-		'CONSUMER_SECRET' => 'dXbNHNqkQlBKZ5dHakJyIojFjvYCFHlukUTjJVkSaNy',
+		'CONSUMER_KEY' => $CHPP_CONSUMER_KEY,
+		'CONSUMER_SECRET' => $CHPP_CONSUMER_SECRET,
+		'MEMCACHED_SERVER_IP' => $GLOBAL_MEMCACHED_SERVER_IP,
+		'MEMCACHED_SERVER_PORT' => $GLOBAL_MEMCACHED_SERVER_PORT,
 		'OAUTH_TOKEN' => $authParams["oauth_token"],
 		'OAUTH_TOKEN_SECRET' => $authParams["oauth_token_secret"]
 	);
@@ -152,6 +156,7 @@
 	for($i = $stagioneIniziale; $i <= $stagioneFinale; $i++)
 	//for($i = $stagioneIniziale; $i <= $stagioneIniziale+1; $i++) //DEBUGPURP.
 	{					
+                //echo "DEBUG: Stagione: ". $i . "<br/>";
 		$matchStagionali = $team->getMatchesArchive(null,null,$i);		
 		
 		//polling file
@@ -161,6 +166,7 @@
 		
 		foreach($matchStagionali->getMatches() as $key => $value)
 		{
+			//echo "DEBUG: Match: ". $key . "<br/>";
 			//variabili di calcolo
 			$goals = 0; //suppongo nessuna rete
 			$matchPlayers = null; //suppongo nessuna formazione
@@ -168,7 +174,8 @@
 			//dati ricavati
 			$homeTeamId = $value->getHomeTeamId();
 			$matchType = $value->getType();					
-			$match = $value->mat_getMatch(false);
+			//$match = $value->mat_getMatch(false);
+                        $match = $value->getMatch(false);
 			$matchDate = $match->getStartDate(); //data del match
 			
 			//passo al match successivo se la data del match è precedente alla data di registrazione dell'utente, registrazione a stagione in corso
@@ -178,23 +185,29 @@
 			if($homeTeamId == $teamId) //giocava in casa...
 			{
 				$goals = $value->getHomeGoals();
-				$matchPlayers = $match->getHomeTeam()->getLineup()->mg_getStartingPlayers();
+				//Changed on 2024-08-27 by ThomTheis on advice of CHPP-teles
+				//$matchPlayers = $match->getHomeTeam()->getLineup()->getStartingPlayers();
+				$matchPlayers = $match->getHomeTeam()->getLineup()->getFinalPlayers();
 			}
 			else //giocava in trasferta...
 			{
 				$goals = $value->getAwayGoals();
-				$matchPlayers = $match->getAwayTeam()->getLineup()->mg_getStartingPlayers();
+				//Changed on 2024-08-27 by ThomTheis on advice of CHPP-teles
+				//$matchPlayers = $match->getAwayTeam()->getLineup()->getStartingPlayers();
+				$matchPlayers = $match->getAwayTeam()->getLineup()->getFinalPlayers();
 			}	
 
 			//aggiorno la lista delle presenze
 			// NB -> le partite vinte a tavolino non contano nelle presenze
 			foreach($matchPlayers as $lineupPlayer)
 			{
+				//echo "DEBUG: Match Player: ". $lineupPlayer->getId() . "<br/>";
 				$idPlayer = $lineupPlayer->getId();
 				$playerRatingStars = $lineupPlayer->getRatingStars();
 				
 				if($playerRatingStars > 0)
 				{
+				//echo "DEBUG: Stars > 0";
 					//in base alla competizione lo vado ad inserire nella struttura dati più adatta
 					if($matchType == HS_CAMPIONATO || $matchType == HS_SPAREGGIO)
 					{
@@ -632,7 +645,8 @@
 			//dati ricavati
 			$homeTeamId = $value->getHomeTeamId();
 			$matchType = $value->getType();					
-			$match = $value->mat_getMatch(false);
+			//$match = $value->mat_getMatch(false);
+			$match = $value->getMatch(false);
 			$matchDate = $match->getStartDate(); //data del match
 			
 			//passo al match successivo se la data del match è precedente alla data di registrazione dell'utente, registrazione a stagione in corso
@@ -641,11 +655,11 @@
 						
 			if($homeTeamId == $teamId) //giocava in casa...
 			{
-				$matchPlayers = $match->getHomeTeam()->getLineup()->mg_getStartingPlayers();
+				$matchPlayers = $match->getHomeTeam()->getLineup()->getStartingPlayers();
 			}
 			else //giocava in trasferta...
 			{
-				$matchPlayers = $match->getAwayTeam()->getLineup()->mg_getStartingPlayers();
+				$matchPlayers = $match->getAwayTeam()->getLineup()->getStartingPlayers();
 			}	
 			
 			/***************/

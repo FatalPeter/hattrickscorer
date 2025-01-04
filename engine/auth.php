@@ -22,9 +22,10 @@
 		exit();
 	}
 	
+	require 'private.php';
 	$config = array(
-		'CONSUMER_KEY' => 'Vrpq4zIU78ySwlrFMvo4nY',
-		'CONSUMER_SECRET' => 'dXbNHNqkQlBKZ5dHakJyIojFjvYCFHlukUTjJVkSaNy',
+		'CONSUMER_KEY' => $CHPP_CONSUMER_KEY,
+		'CONSUMER_SECRET' => $CHPP_CONSUMER_SECRET,
 		'LOG_TYPE' => 'file',
 		'LOG_LEVEL' => \PHT\Log\Level::DEBUG,
 		'LOG_FILE' => __DIR__ . '/pht.log',
@@ -38,7 +39,7 @@
 	{
 		$row = $result->fetch_array(MYSQLI_ASSOC);
 		$tmpToken = $row["tmp_token"];
-    }
+	}
 	else
 	{
 		echo "Impossible retrieve token";

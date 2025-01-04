@@ -61,6 +61,21 @@ class Youth extends Xml\File
     }
 
     /**
+     * Return player full name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        $name = $this->getFirstName() . ' ';
+        if ($this->getNickName() !== null && $this->getNickName() !== '') {
+            $name .= $this->getNickName() . ' ';
+        }
+        $name .= $this->getLastName();
+        return $name;
+    }
+
+    /**
      * Return youth player age
      *
      * @return integer
@@ -155,6 +170,36 @@ class Youth extends Xml\File
             return $node->item(0)->nodeValue;
         }
         return null;
+    }
+
+    /**
+     * Return player native country name
+     *
+     * @return integer
+     */
+    public function getNativeCountryName()
+    {
+        return $this->getXml()->getElementsByTagName('NativeCountryName')->item(0)->nodeValue;
+    }
+
+    /**
+     * Return native country details
+     *
+     * @return \PHT\Xml\World\Country
+     */
+    public function getNativeCountry()
+    {
+        return Wrapper\World::country($this->getNativeCountryId());
+    }
+
+    /**
+     * Return player native country id
+     *
+     * @return integer
+     */
+    public function getNativeCountryId()
+    {
+        return $this->getXml()->getElementsByTagName('NativeCountryID')->item(0)->nodeValue;
     }
 
     /**
@@ -566,9 +611,10 @@ class Youth extends Xml\File
      */
     public function getLastMatch()
     {
-        if ($this->getXml()->getElementsByTagName('LastMatch')->length) {
+        $node = $this->getXml()->getElementsByTagName('LastMatch')->item(0);
+        if ($node !== null && $node->hasChildNodes()) {
             $match = new \DOMDocument('1.0', 'UTF-8');
-            $match->appendChild($match->importNode($this->getXml()->getElementsByTagName('LastMatch')->item(0), true));
+            $match->appendChild($match->importNode($node, true));
             return new LastMatch($match, Config\Config::MATCH_YOUTH);
         }
         return null;

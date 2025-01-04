@@ -34,16 +34,26 @@ class Lineup extends Xml\File
      * Return match details
      *
      * @param boolean $events
-     * @return \PHT\Xml\Match
+     * @return \PHT\Xml\HTMatch
      */
     public function getMatch($events = true)
     {
         if (in_array($this->getMatchType(), array(100, 101, 103, 105, 106))) {
-            return Wrapper\Match::youth($this->getMatchId(), $events);
+            return Wrapper\HTMatch::youth($this->getMatchId(), $events);
         } elseif (in_array($this->getMatchType(), array(50, 51, 60, 61, 80))) {
-            return Wrapper\Match::tournament($this->getMatchId(), $events);
+            return Wrapper\HTMatch::tournament($this->getMatchId(), $events);
         }
-        return Wrapper\Match::senior($this->getMatchId(), $events);
+        return Wrapper\HTMatch::senior($this->getMatchId(), $events);
+    }
+
+    /**
+     * Return match source system
+     *
+     * @return string
+     */
+    public function getSourceSystem()
+    {
+        return $this->getXml()->getElementsByTagName('SourceSystem')->item(0)->nodeValue;
     }
 
     /**
@@ -246,25 +256,6 @@ class Lineup extends Xml\File
         $data = new Utils\XmlIterator($nodeList, '\PHT\Xml\Match\Lineup\Player', $type);
         return $data;
     }
-	
-	/* added */
-	/**
-     * Return iterator of players in starting lineup (modificato, quella standard non tornava il valore che desideravo
-     *
-     * @return \PHT\Xml\Match\Lineup\Player[]
-     */
-    public function mg_getStartingPlayers()
-    {
-        $type = Config\Config::MATCH_SENIOR;
-        if (in_array($this->getMatchType(), array(100, 101, 103, 105, 106))) {
-            $type = Config\Config::MATCH_YOUTH;
-        }
-        $xpath = new \DOMXPath($this->getXml());
-        $nodeList = $xpath->query('//Lineup/Player'); //modificato...
-        /** @var \PHT\Xml\Match\Lineup\Player[] $data */
-        $data = new Utils\XmlIterator($nodeList, '\PHT\Xml\Match\Lineup\Player', $type);
-        return $data;
-    }
 
     /**
      * Return player number in final lineup
@@ -286,7 +277,7 @@ class Lineup extends Xml\File
     public function getFinalPlayer($index)
     {
         $index = round($index);
-        if ($index >= Config\Config::$forIndex && $index < $this->getStartingPlayerNumber() + Config\Config::$forIndex) {
+        if ($index >= Config\Config::$forIndex && $index < $this->getFinalPlayerNumber() + Config\Config::$forIndex) {
             $type = Config\Config::MATCH_SENIOR;
             if (in_array($this->getMatchType(), array(100, 101, 103, 105, 106))) {
                 $type = Config\Config::MATCH_YOUTH;

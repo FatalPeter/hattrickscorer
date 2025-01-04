@@ -29,10 +29,10 @@ class Senior
     public static function team($id = null, $userId = null)
     {
         $params = array('file' => 'teamdetails', 'version' => Config\Version::TEAMDETAILS);
-        if (is_int($id)) {
+        if ($id !== null) {
             $params['teamID'] = $id;
         }
-        if (is_int($userId)) {
+        if ($userId !== null) {
             $params['userID'] = $userId;
         }
         $url = Network\Request::buildUrl($params);
@@ -278,6 +278,21 @@ class Senior
 
     /**
      * @param integer $teamId
+     * @return \PHT\Xml\Team\Staff\TrainerAvatar
+     */
+    public static function traineravatar($teamId = null)
+    {
+        $params = array('file' => 'staffavatars', 'version' => Config\Version::STAFFAVATARS);
+        if ($teamId !== null) {
+            $params['teamId'] = $teamId;
+        }
+        $url = Network\Request::buildUrl($params);
+        $staff = new Xml\Team\Avatars(Network\Request::fetchUrl($url), Config\Config::TRAINER, $teamId);
+        return $staff->getTrainerAvatar();
+    }
+
+    /**
+     * @param integer $teamId
      * @param integer $page
      * @return \PHT\Xml\Team\Transfer\History
      */
@@ -368,7 +383,7 @@ class Senior
     /**
      * @param integer $teamId
      * @param boolean $weekendFriendly
-     * @return \PHT\Xml\Team\Challengeable\Listing
+     * @return \PHT\Xml\Team\Challenges
      */
     public static function challenges($teamId = null, $weekendFriendly = false)
     {
@@ -377,7 +392,7 @@ class Senior
             $params['teamId'] = $teamId;
         }
         $url = Network\Request::buildUrl($params);
-        return new Xml\Team\Challengeable\Listing(Network\Request::fetchUrl($url));
+        return new Xml\Team\Challenges(Network\Request::fetchUrl($url));
     }
 
     /**

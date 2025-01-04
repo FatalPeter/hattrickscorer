@@ -30,6 +30,19 @@ class Chunk extends Xml\Base
     }
 
     /**
+     * Return match source system
+     *
+     * @return string
+     */
+    public function getSourceSystem()
+    {
+        if ($this->getXml()->getElementsByTagName('SourceSystem')->length) {
+            return $this->getXml()->getElementsByTagName('SourceSystem')->item(0)->nodeValue;
+        }
+        return null;
+    }
+
+    /**
      * Return if it's youth match
      *
      * @return boolean
@@ -50,7 +63,7 @@ class Chunk extends Xml\Base
     public function isTournament()
     {
         if ($this->getXml()->getElementsByTagName('SourceSystem')->length) {
-            return strtolower($this->getXml()->getElementsByTagName('SourceSystem')->item(0)->nodeValue) == Config\Config::MATCH_SENIOR;
+            return strtolower($this->getXml()->getElementsByTagName('SourceSystem')->item(0)->nodeValue) == Config\Config::MATCH_TOURNAMENT;
         }
         return false;
     }
@@ -69,35 +82,32 @@ class Chunk extends Xml\Base
     }
 
     /**
-     * Return match details
+     * Return match rule id
      *
-     * @param boolean $events
-     * @return \PHT\Xml\Match
+     * @return string
      */
-    public function getMatch($events = true) 
+    public function MatchRuleId()
     {
-    
-		if ($this->isYouth()) {
-            return Wrapper\Match::youth($this->getId(), $events);
-        } elseif ($this->isTournament()) {
-            return Wrapper\Match::tournament($this->getId(), $events);
+        if ($this->getXml()->getElementsByTagName('MatchRuleId')->length) {
+            return $this->getXml()->getElementsByTagName('MatchRuleId')->item(0)->nodeValue;
         }
-		
-        return Wrapper\Match::senior($this->getId(), $events);
-		
-    }   
+        return null;
+    }
 
-	/**
+    /**
      * Return match details
      *
      * @param boolean $events
-     * @return \PHT\Xml\Match
+     * @return \PHT\Xml\HTMatch
      */
-    public function mat_getMatch($events = true) //hacked
+    public function getMatch($events = true)
     {
-    		
-        return Wrapper\Match::senior($this->getId(), $events);
-		
+        if ($this->isYouth()) {
+            return Wrapper\HTMatch::youth($this->getId(), $events);
+        } elseif ($this->isTournament()) {
+            return Wrapper\HTMatch::tournament($this->getId(), $events);
+        }
+        return Wrapper\HTMatch::senior($this->getId(), $events);
     }
 
     /**
@@ -365,7 +375,7 @@ class Chunk extends Xml\Base
     }
 
     /**
-     * Return cup level if match type is cup, 0 otherwise
+     * Return cup level if match type is cup
      *
      * @return integer
      */
@@ -378,7 +388,7 @@ class Chunk extends Xml\Base
     }
 
     /**
-     * Return cup level index if match type is cup, 0 otherwise
+     * Return cup level index if match type is cup
      *
      * @return integer
      */
@@ -386,6 +396,19 @@ class Chunk extends Xml\Base
     {
         if ($this->getXml()->getElementsByTagName('CupLevelIndex')->length) {
             return $this->getXml()->getElementsByTagName('CupLevelIndex')->item(0)->nodeValue;
+        }
+        return null;
+    }
+
+    /**
+     * Return cup id if match type is cup
+     *
+     * @return integer
+     */
+    public function getCupId()
+    {
+        if ($this->getXml()->getElementsByTagName('CupId')->length) {
+            return $this->getXml()->getElementsByTagName('CupId')->item(0)->nodeValue;
         }
         return null;
     }

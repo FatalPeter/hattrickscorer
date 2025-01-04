@@ -63,7 +63,7 @@ abstract class Config
      *
      * @var string
      */
-    public static $cache = 'none';
+    public static $cache = 'memcached';
 
     /**
      * define internal prefix to store cache data and avoid conflicts
@@ -78,6 +78,13 @@ abstract class Config
      * @var integer
      */
     public static $cacheTtl = 3600;
+
+    /**
+     * redis server ip
+     *
+     * @var string
+     */
+    public static $redisIp;
 
     /**
      * memcached server ip
@@ -166,12 +173,14 @@ abstract class Config
     const MATCH_SENIOR = 'hattrick';
     const MATCH_TOURNAMENT = 'htointegrated';
     const MATCH_NATIONAL = 'national';
+    const HTI_LEAGUE = 1000;
     const PLAYER_URL = '/Club/Players/Player.aspx?';
     const SENIOR = 'senior';
     const YOUTH = 'youth';
     const HOF = 'hof';
     const STAFF = 'staff';
-    const HATTRICK_URL = 'http://www.hattrick.org';
+    const TRAINER = 'trainer';
+    const HATTRICK_URL = 'https://www.hattrick.org';
     const HATTRICK_DOMAIN = 'hattrick.org';
     const BID_SELLING = 1;
     const BID_BUYING = 2;

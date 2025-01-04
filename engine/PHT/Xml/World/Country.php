@@ -120,6 +120,26 @@ class Country extends Xml\Base
     }
 
     /**
+     * Return language id
+     *
+     * @return integer
+     */
+    public function getLanguageId()
+    {
+        return $this->getXml()->getElementsByTagName('LanguageId')->item(0)->nodeValue;
+    }
+
+    /**
+     * Return language name
+     *
+     * @return string
+     */
+    public function getLanguageName()
+    {
+        return $this->getXml()->getElementsByTagName('LanguageName')->item(0)->nodeValue;
+    }
+
+    /**
      * @return boolean
      */
     public function isCountry()
@@ -356,7 +376,7 @@ class Country extends Xml\Base
      * Return region object
      *
      * @param integer $index
-     * @return \PHT\Xml\World\Region
+     * @return \PHT\Xml\World\Region\Chunk
      */
     public function getRegion($index)
     {
@@ -366,7 +386,7 @@ class Country extends Xml\Base
             $nodeList = $this->getXml()->getElementsByTagName('Region');
             $region = new \DOMDocument('1.0', 'UTF-8');
             $region->appendChild($region->importNode($nodeList->item($index), true));
-            return new Xml\World\Region($region);
+            return new Xml\World\Region\Chunk($region);
         }
         return null;
     }
@@ -374,13 +394,13 @@ class Country extends Xml\Base
     /**
      * Return iterator of regions objects
      *
-     * @return \PHT\Xml\World\Region[]
+     * @return \PHT\Xml\World\Region\Chunk[]
      */
     public function getRegions()
     {
         $nodeList = $this->getXml()->getElementsByTagName('Region');
-        /** @var \PHT\Xml\World\Region[] $data */
-        $data = new Utils\XmlIterator($nodeList, '\PHT\Xml\World\Region');
+        /** @var \PHT\Xml\World\Region\Chunk[] $data */
+        $data = new Utils\XmlIterator($nodeList, '\PHT\Xml\World\Region\Chunk');
         return $data;
     }
 

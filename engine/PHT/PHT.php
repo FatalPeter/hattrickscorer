@@ -63,9 +63,9 @@ class PHT extends Config\Base
         if ($team->primary === true) {
             return $this->getPrimarySeniorTeam($team->userId);
         } elseif ($team->secondary === true) {
-            return $this->getSecondarySeniorTeam($team->userId);
+            return $this->getSecondarySeniorTeam($team->userId, $team->number);
         } elseif ($team->international === true) {
-            return $this->getInternationalSeniorTeam($team->userId);
+            return $this->getInternationalSeniorTeam($team->userId, $team->number);
         } else {
             return $this->findSeniorTeam($team->id, $team->userId);
         }
@@ -88,10 +88,12 @@ class PHT extends Config\Base
             throw new Exception\InvalidArgumentException('Parameter $team should be instanceof \PHT\Config\Team');
         }
 
-        if ($team->primary !== null) {
+        if ($team->primary === true) {
             return $this->getPrimaryYouthTeam($team->userId);
-        } elseif ($team->secondary !== null) {
-            return $this->getSecondaryYouthTeam($team->userId);
+        } elseif ($team->secondary === true) {
+            return $this->getSecondaryYouthTeam($team->userId, $team->number);
+        } elseif ($team->international === true) {
+            return $this->getInternationalYouthTeam($team->userId, $team->number);
         } else {
             return $this->findYouthTeam($team->id, $team->userId);
         }
@@ -131,49 +133,66 @@ class PHT extends Config\Base
 
     /**
      * @param integer $userId
+     * @param integer $nth
      * @return \PHT\Xml\Team\Senior
      */
-    protected function getSecondarySeniorTeam($userId = null)
+    protected function getSecondarySeniorTeam($userId = null, $nth = 1)
     {
-        return $this->getSpecificSeniorTeam(Xml\Team\Senior::SECONDARY, $userId);
+        return $this->getSpecificSeniorTeam(Xml\Team\Senior::SECONDARY, $userId, $nth);
     }
 
     /**
      * @param integer $userId
+     * @param integer $nth
      * @return \PHT\Xml\Team\Senior
      */
-    protected function getInternationalSeniorTeam($userId = null)
+    protected function getInternationalSeniorTeam($userId = null, $nth = 1)
     {
-        return $this->getSpecificSeniorTeam(Xml\Team\Senior::INTERNATIONAL, $userId);
+        return $this->getSpecificSeniorTeam(Xml\Team\Senior::INTERNATIONAL, $userId, $nth);
     }
 
     /**
      * @param integer $type
      * @param integer $userId
+     * @param integer $nth
      * @return \PHT\Xml\Team\Senior
      */
-    protected function getSpecificSeniorTeam($type, $userId = null)
+    protected function getSpecificSeniorTeam($type, $userId = null, $nth = 1)
     {
-        $xml = Wrapper\Team\Senior::team(null, $userId);
-
+        $params = array('file' => 'teamdetails', 'version' => Config\Version::TEAMDETAILS);
+        if ($userId !== null) {
+            $params['userID'] = $userId;
+        }
+        $url = Network\Request::buildUrl($params);
+        $xml = Network\Request::fetchUrl($url);
         $doc = new \DOMDocument('1.0', 'UTF-8');
-        $doc->loadXml($xml->getXml(false));
-
+        $doc->loadXml($xml);
         $teams = $doc->getElementsByTagName('Team');
+        $nthS = $nthI = 0;
+        $remove = array();
         for ($t = 0; $t < $teams->length; $t++) {
             $txml = new \DOMDocument('1.0', 'UTF-8');
             $txml->appendChild($txml->importNode($teams->item($t), true));
-            $isHti = $txml->getElementsByTagName('LeagueID')->item(0)->nodeValue == 1000;
+            $isHti = $txml->getElementsByTagName('LeagueID')->item(0)->nodeValue == Config\Config::HTI_LEAGUE;
             $isPrimary = strtolower($txml->getElementsByTagName('IsPrimaryClub')->item(0)->nodeValue) == 'true';
             if ($type == Xml\Team\Senior::PRIMARY && $isPrimary) {
                 continue;
             }
             if ($type == Xml\Team\Senior::SECONDARY && !$isPrimary && !$isHti) {
-                continue;
+                $nthS++;
+                if ($nth == $nthS) {
+                    continue;
+                }
             }
             if ($type == Xml\Team\Senior::INTERNATIONAL && $isHti) {
-                continue;
+                $nthI++;
+                if ($nth == $nthI) {
+                    continue;
+                }
             }
+            $remove[] = $t;
+        }
+        foreach (array_reverse($remove) as $t) {
             $doc->getElementsByTagName('Teams')->item(0)->removeChild($teams->item($t));
         }
         if ($doc->getElementsByTagName('Team')->length) {
@@ -188,16 +207,39 @@ class PHT extends Config\Base
      */
     protected function getPrimaryYouthTeam($userId = null)
     {
-        return $this->findYouthTeam($this->getPrimarySeniorTeam($userId)->getYouthTeamId());
+        $team = $this->getPrimarySeniorTeam($userId);
+        if ($team instanceof Xml\Team\Senior) {
+            return $this->findYouthTeam($team->getYouthTeamId());
+        }
+        return null;
     }
 
     /**
      * @param integer $userId
+     * @param integer $nth
      * @return \PHT\Xml\Team\Youth
      */
-    protected function getSecondaryYouthTeam($userId = null)
+    protected function getSecondaryYouthTeam($userId = null, $nth = 1)
     {
-        return $this->findYouthTeam($this->getSecondarySeniorTeam($userId)->getYouthTeamId());
+        $team = $this->getSecondarySeniorTeam($userId, $nth);
+        if ($team instanceof Xml\Team\Senior) {
+            return $this->findYouthTeam($team->getYouthTeamId());
+        }
+        return null;
+    }
+
+    /**
+     * @param integer $userId
+     * @param integer $nth
+     * @return \PHT\Xml\Team\Youth
+     */
+    protected function getInternationalYouthTeam($userId = null, $nth = 1)
+    {
+        $team = $this->getInternationalSeniorTeam($userId, $nth);
+        if ($team instanceof Xml\Team\Senior) {
+            return $this->findYouthTeam($team->getYouthTeamId());
+        }
+        return null;
     }
 
     /**
@@ -529,6 +571,9 @@ class PHT extends Config\Base
         } else {
             throw new Exception\InvalidArgumentException('Parameter $search should have at least one property defined to perform a search');
         }
+        if (isset($search->page)) {
+            $params['pageIndex'] = $search->page;
+        }
 
         return Wrapper\Search::search($params);
     }
@@ -601,7 +646,7 @@ class PHT extends Config\Base
         if ($teamId === null) {
             $teamId = $this->findSeniorTeam()->getYouthTeamId();
         }
-        return Wrapper\Team\Senior::matches($teamId, $showBeforeDate);
+        return Wrapper\Team\Youth::matches($teamId, $showBeforeDate);
     }
 
     /**
@@ -639,11 +684,11 @@ class PHT extends Config\Base
      *
      * @param integer $matchId
      * @param boolean $matchEvents
-     * @return \PHT\Xml\Match
+     * @return \PHT\Xml\HTMatch
      */
     public function getSeniorMatch($matchId, $matchEvents = true)
     {
-        return Wrapper\Match::senior($matchId, $matchEvents);
+        return Wrapper\HTMatch::senior($matchId, $matchEvents);
     }
 
     /**
@@ -651,11 +696,11 @@ class PHT extends Config\Base
      *
      * @param integer $matchId
      * @param boolean $matchEvents
-     * @return \PHT\Xml\Match
+     * @return \PHT\Xml\HTMatch
      */
     public function getYouthMatch($matchId, $matchEvents = true)
     {
-        return Wrapper\Match::youth($matchId, $matchEvents);
+        return Wrapper\HTMatch::youth($matchId, $matchEvents);
     }
 
     /**
@@ -663,11 +708,11 @@ class PHT extends Config\Base
      *
      * @param integer $matchId
      * @param boolean $matchEvents
-     * @return \PHT\Xml\Match
+     * @return \PHT\Xml\HTMatch
      */
     public function getTournamentMatch($matchId, $matchEvents = true)
     {
-        return Wrapper\Match::tournament($matchId, $matchEvents);
+        return Wrapper\HTMatch::tournament($matchId, $matchEvents);
     }
 
     /**
@@ -679,7 +724,7 @@ class PHT extends Config\Base
      */
     public function getSeniorMatchLineup($matchId = null, $teamId = null)
     {
-        return Wrapper\Match::seniorlineup($matchId, $teamId);
+        return Wrapper\HTMatch::seniorlineup($matchId, $teamId);
     }
 
     /**
@@ -691,7 +736,7 @@ class PHT extends Config\Base
      */
     public function getYouthMatchLineup($matchId = null, $teamId = null)
     {
-        return Wrapper\Match::youthlineup($matchId, $teamId);
+        return Wrapper\HTMatch::youthlineup($matchId, $teamId);
     }
 
     /**
@@ -703,7 +748,7 @@ class PHT extends Config\Base
      */
     public function getTournamentMatchLineup($matchId, $teamId = null)
     {
-        return Wrapper\Match::tournamentlineup($matchId, $teamId);
+        return Wrapper\HTMatch::tournamentlineup($matchId, $teamId);
     }
 
     /**
@@ -715,7 +760,7 @@ class PHT extends Config\Base
      */
     public function getSeniorMatchOrders($matchId, $teamId = null)
     {
-        return Wrapper\Match::seniororders($matchId, $teamId);
+        return Wrapper\HTMatch::seniororders($matchId, $teamId);
     }
 
     /**
@@ -727,7 +772,7 @@ class PHT extends Config\Base
      */
     public function getYouthMatchOrders($matchId, $teamId = null)
     {
-        return Wrapper\Match::youthorders($matchId, $teamId);
+        return Wrapper\HTMatch::youthorders($matchId, $teamId);
     }
 
     /**
@@ -739,7 +784,7 @@ class PHT extends Config\Base
      */
     public function getTournamentMatchOrders($matchId, $teamId = null)
     {
-        return Wrapper\Match::tournamentorders($matchId, $teamId);
+        return Wrapper\HTMatch::tournamentorders($matchId, $teamId);
     }
 
     /**
@@ -752,7 +797,7 @@ class PHT extends Config\Base
      */
     public function setMatchOrders(Config\Orders $orders, $teamId = null)
     {
-        return Wrapper\Match::setorders($orders, $teamId);
+        return Wrapper\HTMatch::setorders($orders, $teamId);
     }
 
     /**
@@ -826,6 +871,17 @@ class PHT extends Config\Base
     public function getStaffAvatars($teamId = null)
     {
         return Wrapper\Team\Senior::staffavatars($teamId);
+    }
+
+    /**
+     * Return senior team trainer avatar
+     *
+     * @param integer $teamId
+     * @return \PHT\Xml\Team\Staff\TrainerAvatar
+     */
+    public function getTrainerAvatar($teamId = null)
+    {
+        return Wrapper\Team\Senior::traineravatar($teamId);
     }
 
     /**
@@ -909,6 +965,15 @@ class PHT extends Config\Base
     public function getStaff($teamId = null)
     {
         return Wrapper\Team\Senior::staff($teamId);
+    }
+
+    /**
+     * @param integer $teamId
+     * @return \PHT\Xml\Team\Staff\Trainer
+     */
+    public function getTrainer($teamId = null)
+    {
+        return $this->getStaff($teamId)->getTrainer();
     }
 
     /**
@@ -1020,33 +1085,37 @@ class PHT extends Config\Base
      * Return tournament object
      *
      * @param integer $tournamentId
+     * @param integer $season
      * @return \PHT\Xml\Tournaments\Tournament
      */
-    public function getTournament($tournamentId)
+    public function getTournament($tournamentId, $season = null)
     {
-        return Wrapper\Tournament::tournament($tournamentId);
+        return Wrapper\Tournament::tournament($tournamentId, $season);
     }
 
     /**
      * Return tournament league object
      *
      * @param integer $tournamentId
+     * @param integer $season
+     * @param integer $worldcupRound (only for worldcup tournament)
      * @return \PHT\Xml\Tournaments\League
      */
-    public function getTournamentLeague($tournamentId)
+    public function getTournamentLeague($tournamentId, $season = null, $worldcupRound = null)
     {
-        return Wrapper\Tournament::league($tournamentId);
+        return Wrapper\Tournament::league($tournamentId, $season, $worldcupRound);
     }
 
     /**
      * Return tournament matches object
      *
      * @param integer $tournamentId
+     * @param integer $season
      * @return \PHT\Xml\Tournaments\Matches
      */
-    public function getTournamentMatches($tournamentId)
+    public function getTournamentMatches($tournamentId, $season = null)
     {
-        return Wrapper\Tournament::matches($tournamentId);
+        return Wrapper\Tournament::matches($tournamentId, $season);
     }
 
     /**
@@ -1147,11 +1216,14 @@ class PHT extends Config\Base
      * @param boolean $includeLineup
      * @return \PHT\Xml\Live
      */
-    public function getLive($includeLineup = true)
+    public function getLive($includeLineup = true, $useLiveEventsAndTexts = true)
     {
         $params = array('file' => 'live', 'actionType' => 'viewAll', 'version' => Config\Version::LIVE);
         if ($includeLineup === true) {
             $params['includeStartingLineup'] = 'true';
+        }
+        if ($useLiveEventsAndTexts === true) {
+            $params['useLiveEventsAndTexts'] = 'true';
         }
         $url = Network\Request::buildUrl($params);
         return new Xml\Live(Network\Request::fetchUrl($url));
@@ -1246,7 +1318,7 @@ class PHT extends Config\Base
      *
      * @param integer $teamId
      * @param boolean $weekendFriendly
-     * @return \PHT\Xml\Team\Challengeable\Listing
+     * @return \PHT\Xml\Team\Challenges
      */
     public function getChallenges($teamId = null, $weekendFriendly = false)
     {

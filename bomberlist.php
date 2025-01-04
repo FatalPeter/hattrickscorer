@@ -15,7 +15,7 @@
 		preferences
 	*/
 	
-	define (DATE_FORMAT, "Y-m-d");
+	define("DATE_FORMAT", "Y-m-d");
 	
 	/******/
 	//Ricavo i dati dell'utente se è arrivato alla bomberlist dopo la dashboard 

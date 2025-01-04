@@ -1,0 +1,7 @@
+<?php
+//Global settings
+
+$GLOBAL_MEMCACHED_SERVER_IP = '127.0.0.1';
+$GLOBAL_MEMCACHED_SERVER_PORT = '11211';
+
+?>

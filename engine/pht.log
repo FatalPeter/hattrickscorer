@@ -1,0 +1,245 @@
+2024-08-03 22:03:06|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D0cf08367456448a533c2a1e5341cbf01a4e38895%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722722586%26oauth_token%3DBV2rG29xxtOr4EBd%26oauth_verifier%3DSRCgM5HjGVG72GSX%26oauth_version%3D1.0 
+2024-08-03 22:03:06|DEBUG|[OAUTH] Signature: +Iv4zgo6vofi2O3qz7Isk7/7LY4= 
+2024-08-03 22:03:06|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '0cf08367456448a533c2a1e5341cbf01a4e38895',   'oauth_signature' => '+Iv4zgo6vofi2O3qz7Isk7/7LY4=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722722586,   'oauth_token' => 'BV2rG29xxtOr4EBd',   'oauth_verifier' => 'SRCgM5HjGVG72GSX',   'oauth_version' => '1.0', )
+2024-08-03 22:03:06|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=0cf08367456448a533c2a1e5341cbf01a4e38895&oauth_signature=%2BIv4zgo6vofi2O3qz7Isk7%2F7LY4%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722722586&oauth_token=BV2rG29xxtOr4EBd&oauth_verifier=SRCgM5HjGVG72GSX&oauth_version=1.0 
+2024-08-03 22:03:06|DEBUG|[NETWORK] Start fetching url 
+2024-08-03 22:03:08|DEBUG|[NETWORK] Fetch done in: 2.6417059898376 
+2024-08-03 22:03:08|ERROR|[OAUTH] No access token received 
+2024-08-03 22:05:22|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D0203ea903a6bed4ecb06663556c0141eb71cafb1%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722722722%26oauth_token%3DBV2rG29xxtOr4EBd%26oauth_verifier%3DSRCgM5HjGVG72GSX%26oauth_version%3D1.0 
+2024-08-03 22:05:22|DEBUG|[OAUTH] Signature: ylxW9SBM2F2efP/eMP55VND4DMQ= 
+2024-08-03 22:05:22|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '0203ea903a6bed4ecb06663556c0141eb71cafb1',   'oauth_signature' => 'ylxW9SBM2F2efP/eMP55VND4DMQ=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722722722,   'oauth_token' => 'BV2rG29xxtOr4EBd',   'oauth_verifier' => 'SRCgM5HjGVG72GSX',   'oauth_version' => '1.0', )
+2024-08-03 22:05:22|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=0203ea903a6bed4ecb06663556c0141eb71cafb1&oauth_signature=ylxW9SBM2F2efP%2FeMP55VND4DMQ%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722722722&oauth_token=BV2rG29xxtOr4EBd&oauth_verifier=SRCgM5HjGVG72GSX&oauth_version=1.0 
+2024-08-03 22:05:22|DEBUG|[NETWORK] Start fetching url 
+2024-08-03 22:05:22|DEBUG|[NETWORK] Fetch done in: 0.29000806808472 
+2024-08-03 22:05:22|ERROR|[OAUTH] No access token received 
+2024-08-03 22:05:32|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D30c1ca39ba06c9baf2ea27eadebd72a724249eb5%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722722732%26oauth_token%3DBV2rG29xxtOr4EBd%26oauth_verifier%3DLAERWInpWwoSb2GC%26oauth_version%3D1.0 
+2024-08-03 22:05:32|DEBUG|[OAUTH] Signature: 3u6Z/WrFc+2xfRA1avnuoW3WRGY= 
+2024-08-03 22:05:32|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '30c1ca39ba06c9baf2ea27eadebd72a724249eb5',   'oauth_signature' => '3u6Z/WrFc+2xfRA1avnuoW3WRGY=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722722732,   'oauth_token' => 'BV2rG29xxtOr4EBd',   'oauth_verifier' => 'LAERWInpWwoSb2GC',   'oauth_version' => '1.0', )
+2024-08-03 22:05:32|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=30c1ca39ba06c9baf2ea27eadebd72a724249eb5&oauth_signature=3u6Z%2FWrFc%2B2xfRA1avnuoW3WRGY%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722722732&oauth_token=BV2rG29xxtOr4EBd&oauth_verifier=LAERWInpWwoSb2GC&oauth_version=1.0 
+2024-08-03 22:05:32|DEBUG|[NETWORK] Start fetching url 
+2024-08-03 22:05:32|DEBUG|[NETWORK] Fetch done in: 0.52069997787476 
+2024-08-03 22:05:32|ERROR|[OAUTH] No access token received 
+2024-08-03 22:11:49|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D871990b430257bfec4a293e78f48af650bf3be19%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722723109%26oauth_token%3DBV2rG29xxtOr4EBd%26oauth_verifier%3DLAERWInpWwoSb2GC%26oauth_version%3D1.0 
+2024-08-03 22:11:49|DEBUG|[OAUTH] Signature: wqEPCyFechkZgHfE5CaYkZu2gSM= 
+2024-08-03 22:11:49|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '871990b430257bfec4a293e78f48af650bf3be19',   'oauth_signature' => 'wqEPCyFechkZgHfE5CaYkZu2gSM=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722723109,   'oauth_token' => 'BV2rG29xxtOr4EBd',   'oauth_verifier' => 'LAERWInpWwoSb2GC',   'oauth_version' => '1.0', )
+2024-08-03 22:11:49|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=871990b430257bfec4a293e78f48af650bf3be19&oauth_signature=wqEPCyFechkZgHfE5CaYkZu2gSM%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722723109&oauth_token=BV2rG29xxtOr4EBd&oauth_verifier=LAERWInpWwoSb2GC&oauth_version=1.0 
+2024-08-03 22:11:49|DEBUG|[NETWORK] Start fetching url 
+2024-08-03 22:11:50|DEBUG|[NETWORK] Fetch done in: 0.56889081001282 
+2024-08-03 22:11:50|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-03 22:11:50|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-03 22:12:24|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D900fabd9fc97506efd5c73a762bfc601206d1fd2%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722723144%26oauth_token%3DihZkAL23BMXhPPUk%26oauth_verifier%3D1LfNvA4hNyVB3n5j%26oauth_version%3D1.0 
+2024-08-03 22:12:24|DEBUG|[OAUTH] Signature: /7ItkUtfsYDrvnsWpwLZOQreZkE= 
+2024-08-03 22:12:24|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '900fabd9fc97506efd5c73a762bfc601206d1fd2',   'oauth_signature' => '/7ItkUtfsYDrvnsWpwLZOQreZkE=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722723144,   'oauth_token' => 'ihZkAL23BMXhPPUk',   'oauth_verifier' => '1LfNvA4hNyVB3n5j',   'oauth_version' => '1.0', )
+2024-08-03 22:12:24|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=900fabd9fc97506efd5c73a762bfc601206d1fd2&oauth_signature=%2F7ItkUtfsYDrvnsWpwLZOQreZkE%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722723144&oauth_token=ihZkAL23BMXhPPUk&oauth_verifier=1LfNvA4hNyVB3n5j&oauth_version=1.0 
+2024-08-03 22:12:24|DEBUG|[NETWORK] Start fetching url 
+2024-08-03 22:12:24|DEBUG|[NETWORK] Fetch done in: 0.27890300750732 
+2024-08-03 22:12:24|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-03 22:12:24|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-03 22:14:47|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D9a5fc5cf6875b2206c09462f7a058e93d2a93c76%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722723287%26oauth_token%3DTFWeivwKfNAL79nD%26oauth_verifier%3DblvHMxUqk3qVHAsQ%26oauth_version%3D1.0 
+2024-08-03 22:14:47|DEBUG|[OAUTH] Signature: t2/LJ7sZt/lAV+sDP8gIzOL6r6o= 
+2024-08-03 22:14:47|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '9a5fc5cf6875b2206c09462f7a058e93d2a93c76',   'oauth_signature' => 't2/LJ7sZt/lAV+sDP8gIzOL6r6o=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722723287,   'oauth_token' => 'TFWeivwKfNAL79nD',   'oauth_verifier' => 'blvHMxUqk3qVHAsQ',   'oauth_version' => '1.0', )
+2024-08-03 22:14:47|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=9a5fc5cf6875b2206c09462f7a058e93d2a93c76&oauth_signature=t2%2FLJ7sZt%2FlAV%2BsDP8gIzOL6r6o%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722723287&oauth_token=TFWeivwKfNAL79nD&oauth_verifier=blvHMxUqk3qVHAsQ&oauth_version=1.0 
+2024-08-03 22:14:47|DEBUG|[NETWORK] Start fetching url 
+2024-08-03 22:14:48|DEBUG|[NETWORK] Fetch done in: 1.0167298316956 
+2024-08-03 22:14:48|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-03 22:14:48|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-04 04:52:54|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D648920314b3b83b90d159885a62c802f4f4de5db%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722747174%26oauth_token%3D5g3gjPlLjNCIhE8a%26oauth_verifier%3DLACiLZumxzhxHaK4%26oauth_version%3D1.0 
+2024-08-04 04:52:54|DEBUG|[OAUTH] Signature: hcdb5Doch6qRdxWfb6qm7wwb4to= 
+2024-08-04 04:52:54|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '648920314b3b83b90d159885a62c802f4f4de5db',   'oauth_signature' => 'hcdb5Doch6qRdxWfb6qm7wwb4to=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722747174,   'oauth_token' => '5g3gjPlLjNCIhE8a',   'oauth_verifier' => 'LACiLZumxzhxHaK4',   'oauth_version' => '1.0', )
+2024-08-04 04:52:54|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=648920314b3b83b90d159885a62c802f4f4de5db&oauth_signature=hcdb5Doch6qRdxWfb6qm7wwb4to%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722747174&oauth_token=5g3gjPlLjNCIhE8a&oauth_verifier=LACiLZumxzhxHaK4&oauth_version=1.0 
+2024-08-04 04:52:54|DEBUG|[NETWORK] Start fetching url 
+2024-08-04 04:52:54|DEBUG|[NETWORK] Fetch done in: 0.29286599159241 
+2024-08-04 04:52:54|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-04 04:52:54|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-04 16:39:03|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Deee8d24965edda00158844a1601dc2be2c875577%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722789543%26oauth_token%3DUCNpFvI7z7Q9RfRx%26oauth_verifier%3DPxXgv3FAUErKxW9g%26oauth_version%3D1.0 
+2024-08-04 16:39:03|DEBUG|[OAUTH] Signature: tRcNco2qMhE9SLyeMm4satsC2Hc= 
+2024-08-04 16:39:03|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'eee8d24965edda00158844a1601dc2be2c875577',   'oauth_signature' => 'tRcNco2qMhE9SLyeMm4satsC2Hc=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722789543,   'oauth_token' => 'UCNpFvI7z7Q9RfRx',   'oauth_verifier' => 'PxXgv3FAUErKxW9g',   'oauth_version' => '1.0', )
+2024-08-04 16:39:03|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=eee8d24965edda00158844a1601dc2be2c875577&oauth_signature=tRcNco2qMhE9SLyeMm4satsC2Hc%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722789543&oauth_token=UCNpFvI7z7Q9RfRx&oauth_verifier=PxXgv3FAUErKxW9g&oauth_version=1.0 
+2024-08-04 16:39:03|DEBUG|[NETWORK] Start fetching url 
+2024-08-04 16:39:03|DEBUG|[NETWORK] Fetch done in: 0.303062915802 
+2024-08-04 16:39:03|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-08-04 16:39:03|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-08-04 21:33:31|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Dfb702cc2c0895b29d3c4080c42350059850eb981%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722807211%26oauth_token%3D47V1wcAlLSn4cJ5W%26oauth_verifier%3DFGToPDNneBjE7BmJ%26oauth_version%3D1.0 
+2024-08-04 21:33:31|DEBUG|[OAUTH] Signature: YPOe61Lb/s4Xi2T3MLP5u5JHqYQ= 
+2024-08-04 21:33:31|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'fb702cc2c0895b29d3c4080c42350059850eb981',   'oauth_signature' => 'YPOe61Lb/s4Xi2T3MLP5u5JHqYQ=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722807211,   'oauth_token' => '47V1wcAlLSn4cJ5W',   'oauth_verifier' => 'FGToPDNneBjE7BmJ',   'oauth_version' => '1.0', )
+2024-08-04 21:33:31|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=fb702cc2c0895b29d3c4080c42350059850eb981&oauth_signature=YPOe61Lb%2Fs4Xi2T3MLP5u5JHqYQ%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722807211&oauth_token=47V1wcAlLSn4cJ5W&oauth_verifier=FGToPDNneBjE7BmJ&oauth_version=1.0 
+2024-08-04 21:33:31|DEBUG|[NETWORK] Start fetching url 
+2024-08-04 21:33:31|DEBUG|[NETWORK] Fetch done in: 0.27944397926331 
+2024-08-04 21:33:31|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-04 21:33:31|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-05 06:12:58|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D820b21c7202839fa7ab74cbd7b456acddf17216e%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722838378%26oauth_token%3DAVO5gKLM1hko44NR%26oauth_verifier%3DEcnEgmBxs6nblF6j%26oauth_version%3D1.0 
+2024-08-05 06:12:58|DEBUG|[OAUTH] Signature: kVg9pkmnd2XbXXUc6eni1yTW3Zg= 
+2024-08-05 06:12:58|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '820b21c7202839fa7ab74cbd7b456acddf17216e',   'oauth_signature' => 'kVg9pkmnd2XbXXUc6eni1yTW3Zg=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722838378,   'oauth_token' => 'AVO5gKLM1hko44NR',   'oauth_verifier' => 'EcnEgmBxs6nblF6j',   'oauth_version' => '1.0', )
+2024-08-05 06:12:58|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=820b21c7202839fa7ab74cbd7b456acddf17216e&oauth_signature=kVg9pkmnd2XbXXUc6eni1yTW3Zg%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722838378&oauth_token=AVO5gKLM1hko44NR&oauth_verifier=EcnEgmBxs6nblF6j&oauth_version=1.0 
+2024-08-05 06:12:58|DEBUG|[NETWORK] Start fetching url 
+2024-08-05 06:12:58|DEBUG|[NETWORK] Fetch done in: 0.30018901824951 
+2024-08-05 06:12:58|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-05 06:12:58|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-05 07:08:20|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Db4dd2eccc39126d308f31126142910fa3d6ce7cd%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1722841700%26oauth_token%3DE6F3MM5MKbBlKsAI%26oauth_verifier%3DK5vgBTBikxShOFHX%26oauth_version%3D1.0 
+2024-08-05 07:08:20|DEBUG|[OAUTH] Signature: b2I0IywMxK9zk5bWBXTpsnr5EK4= 
+2024-08-05 07:08:20|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'b4dd2eccc39126d308f31126142910fa3d6ce7cd',   'oauth_signature' => 'b2I0IywMxK9zk5bWBXTpsnr5EK4=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1722841700,   'oauth_token' => 'E6F3MM5MKbBlKsAI',   'oauth_verifier' => 'K5vgBTBikxShOFHX',   'oauth_version' => '1.0', )
+2024-08-05 07:08:20|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=b4dd2eccc39126d308f31126142910fa3d6ce7cd&oauth_signature=b2I0IywMxK9zk5bWBXTpsnr5EK4%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1722841700&oauth_token=E6F3MM5MKbBlKsAI&oauth_verifier=K5vgBTBikxShOFHX&oauth_version=1.0 
+2024-08-05 07:08:20|DEBUG|[NETWORK] Start fetching url 
+2024-08-05 07:08:20|DEBUG|[NETWORK] Fetch done in: 0.27206516265869 
+2024-08-05 07:08:20|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-05 07:08:20|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-24 20:28:49|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Dd5686df839adb3edb67c80e008f489b5b278e3f5%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1724531329%26oauth_token%3DOMHVuerrFWSrATMB%26oauth_verifier%3Do2pPr5595IVds6pw%26oauth_version%3D1.0 
+2024-08-24 20:28:49|DEBUG|[OAUTH] Signature: gIPeLHpsqtheZN/QtOctAZdyo1A= 
+2024-08-24 20:28:49|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'd5686df839adb3edb67c80e008f489b5b278e3f5',   'oauth_signature' => 'gIPeLHpsqtheZN/QtOctAZdyo1A=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1724531329,   'oauth_token' => 'OMHVuerrFWSrATMB',   'oauth_verifier' => 'o2pPr5595IVds6pw',   'oauth_version' => '1.0', )
+2024-08-24 20:28:49|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=d5686df839adb3edb67c80e008f489b5b278e3f5&oauth_signature=gIPeLHpsqtheZN%2FQtOctAZdyo1A%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1724531329&oauth_token=OMHVuerrFWSrATMB&oauth_verifier=o2pPr5595IVds6pw&oauth_version=1.0 
+2024-08-24 20:28:49|DEBUG|[NETWORK] Start fetching url 
+2024-08-24 20:28:49|DEBUG|[NETWORK] Fetch done in: 0.3007960319519 
+2024-08-24 20:28:49|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-24 20:28:49|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-25 12:30:30|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D7e8891eea2ceecfa3fae9f8641480d4933424320%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1724589030%26oauth_token%3Dajh5MGKyX43bKNCf%26oauth_verifier%3DrwuKwoYPb9LfJj61%26oauth_version%3D1.0 
+2024-08-25 12:30:30|DEBUG|[OAUTH] Signature: Q14s7owaS93DURMNkmu01sTmcDA= 
+2024-08-25 12:30:30|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '7e8891eea2ceecfa3fae9f8641480d4933424320',   'oauth_signature' => 'Q14s7owaS93DURMNkmu01sTmcDA=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1724589030,   'oauth_token' => 'ajh5MGKyX43bKNCf',   'oauth_verifier' => 'rwuKwoYPb9LfJj61',   'oauth_version' => '1.0', )
+2024-08-25 12:30:30|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=7e8891eea2ceecfa3fae9f8641480d4933424320&oauth_signature=Q14s7owaS93DURMNkmu01sTmcDA%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1724589030&oauth_token=ajh5MGKyX43bKNCf&oauth_verifier=rwuKwoYPb9LfJj61&oauth_version=1.0 
+2024-08-25 12:30:30|DEBUG|[NETWORK] Start fetching url 
+2024-08-25 12:30:30|DEBUG|[NETWORK] Fetch done in: 0.28810286521912 
+2024-08-25 12:30:30|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-25 12:30:30|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-27 11:39:51|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Dea51f64085361aac0e037f3a216a1e1dbb98c046%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1724758791%26oauth_token%3DHiP2Sx7he1uLWLJR%26oauth_verifier%3DGOg6zFMHeGo5uj9C%26oauth_version%3D1.0 
+2024-08-27 11:39:51|DEBUG|[OAUTH] Signature: 4nyR2Yw6xiiswonDGQ86GxIzUzI= 
+2024-08-27 11:39:51|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'ea51f64085361aac0e037f3a216a1e1dbb98c046',   'oauth_signature' => '4nyR2Yw6xiiswonDGQ86GxIzUzI=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1724758791,   'oauth_token' => 'HiP2Sx7he1uLWLJR',   'oauth_verifier' => 'GOg6zFMHeGo5uj9C',   'oauth_version' => '1.0', )
+2024-08-27 11:39:51|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=ea51f64085361aac0e037f3a216a1e1dbb98c046&oauth_signature=4nyR2Yw6xiiswonDGQ86GxIzUzI%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1724758791&oauth_token=HiP2Sx7he1uLWLJR&oauth_verifier=GOg6zFMHeGo5uj9C&oauth_version=1.0 
+2024-08-27 11:39:51|DEBUG|[NETWORK] Start fetching url 
+2024-08-27 11:39:52|DEBUG|[NETWORK] Fetch done in: 0.3097620010376 
+2024-08-27 11:39:52|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-08-27 11:39:52|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-08-30 19:01:20|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D24a57f4204738defea0c7f80c04506028391ae0b%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1725044480%26oauth_token%3DrJRaeuDK2J5vLyWk%26oauth_verifier%3DiQHNm3kzCa7np37X%26oauth_version%3D1.0 
+2024-08-30 19:01:20|DEBUG|[OAUTH] Signature: /uYI3vRiXaA1/Ji9GGjOpzU3eSY= 
+2024-08-30 19:01:20|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '24a57f4204738defea0c7f80c04506028391ae0b',   'oauth_signature' => '/uYI3vRiXaA1/Ji9GGjOpzU3eSY=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1725044480,   'oauth_token' => 'rJRaeuDK2J5vLyWk',   'oauth_verifier' => 'iQHNm3kzCa7np37X',   'oauth_version' => '1.0', )
+2024-08-30 19:01:20|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=24a57f4204738defea0c7f80c04506028391ae0b&oauth_signature=%2FuYI3vRiXaA1%2FJi9GGjOpzU3eSY%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1725044480&oauth_token=rJRaeuDK2J5vLyWk&oauth_verifier=iQHNm3kzCa7np37X&oauth_version=1.0 
+2024-08-30 19:01:20|DEBUG|[NETWORK] Start fetching url 
+2024-08-30 19:01:20|DEBUG|[NETWORK] Fetch done in: 0.32356405258179 
+2024-08-30 19:01:20|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-08-30 19:01:20|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-08-31 20:07:46|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Db2bd69e5a0b579cc2671ab4bb2e23cade71c9f63%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1725134866%26oauth_token%3DYSlljDqaGESfiWT3%26oauth_verifier%3DOIdGKCHgIVChc7kD%26oauth_version%3D1.0 
+2024-08-31 20:07:46|DEBUG|[OAUTH] Signature: a4mkTlBrqdmFeuoOIWfe6ibg6eY= 
+2024-08-31 20:07:46|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'b2bd69e5a0b579cc2671ab4bb2e23cade71c9f63',   'oauth_signature' => 'a4mkTlBrqdmFeuoOIWfe6ibg6eY=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1725134866,   'oauth_token' => 'YSlljDqaGESfiWT3',   'oauth_verifier' => 'OIdGKCHgIVChc7kD',   'oauth_version' => '1.0', )
+2024-08-31 20:07:46|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=b2bd69e5a0b579cc2671ab4bb2e23cade71c9f63&oauth_signature=a4mkTlBrqdmFeuoOIWfe6ibg6eY%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1725134866&oauth_token=YSlljDqaGESfiWT3&oauth_verifier=OIdGKCHgIVChc7kD&oauth_version=1.0 
+2024-08-31 20:07:46|DEBUG|[NETWORK] Start fetching url 
+2024-08-31 20:07:47|DEBUG|[NETWORK] Fetch done in: 1.2793259620667 
+2024-08-31 20:07:47|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-08-31 20:07:47|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-09-22 17:23:37|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D5e4046aa5bb27c224352e0143ad62eaf0c9a5e61%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1727025817%26oauth_token%3D3vh2oDvx5iklZT8l%26oauth_verifier%3DRbL1XEGJSQat9X5I%26oauth_version%3D1.0 
+2024-09-22 17:23:37|DEBUG|[OAUTH] Signature: eIDKbjy7+MihaAdT2tKqX+GN0oE= 
+2024-09-22 17:23:37|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '5e4046aa5bb27c224352e0143ad62eaf0c9a5e61',   'oauth_signature' => 'eIDKbjy7+MihaAdT2tKqX+GN0oE=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1727025817,   'oauth_token' => '3vh2oDvx5iklZT8l',   'oauth_verifier' => 'RbL1XEGJSQat9X5I',   'oauth_version' => '1.0', )
+2024-09-22 17:23:37|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=5e4046aa5bb27c224352e0143ad62eaf0c9a5e61&oauth_signature=eIDKbjy7%2BMihaAdT2tKqX%2BGN0oE%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1727025817&oauth_token=3vh2oDvx5iklZT8l&oauth_verifier=RbL1XEGJSQat9X5I&oauth_version=1.0 
+2024-09-22 17:23:37|DEBUG|[NETWORK] Start fetching url 
+2024-09-22 17:23:37|DEBUG|[NETWORK] Fetch done in: 0.30225014686584 
+2024-09-22 17:23:37|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-09-22 17:23:37|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-09-27 21:04:45|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D434465da710faf1806903e1e4993e06d9ccf9501%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1727463885%26oauth_token%3Dhvfhn5C9FvfyHndh%26oauth_verifier%3DpJoze6PRaQUS4fYo%26oauth_version%3D1.0 
+2024-09-27 21:04:45|DEBUG|[OAUTH] Signature: ND6KdK13AxeKJg1yA0Lbyhknlic= 
+2024-09-27 21:04:45|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '434465da710faf1806903e1e4993e06d9ccf9501',   'oauth_signature' => 'ND6KdK13AxeKJg1yA0Lbyhknlic=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1727463885,   'oauth_token' => 'hvfhn5C9FvfyHndh',   'oauth_verifier' => 'pJoze6PRaQUS4fYo',   'oauth_version' => '1.0', )
+2024-09-27 21:04:45|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=434465da710faf1806903e1e4993e06d9ccf9501&oauth_signature=ND6KdK13AxeKJg1yA0Lbyhknlic%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1727463885&oauth_token=hvfhn5C9FvfyHndh&oauth_verifier=pJoze6PRaQUS4fYo&oauth_version=1.0 
+2024-09-27 21:04:45|DEBUG|[NETWORK] Start fetching url 
+2024-09-27 21:04:46|DEBUG|[NETWORK] Fetch done in: 0.28457188606262 
+2024-09-27 21:04:46|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-09-27 21:04:46|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-09-27 21:31:26|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D69ddfb62fe5c3580f7cdd1b49097f37e9c60edb8%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1727465486%26oauth_token%3DalMuB4PubTbsqs4Y%26oauth_verifier%3DXZ8cCqX5vMti3BMV%26oauth_version%3D1.0 
+2024-09-27 21:31:26|DEBUG|[OAUTH] Signature: ebBNjkxNRXJJl+VDJ5Fr1h8oSCw= 
+2024-09-27 21:31:26|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '69ddfb62fe5c3580f7cdd1b49097f37e9c60edb8',   'oauth_signature' => 'ebBNjkxNRXJJl+VDJ5Fr1h8oSCw=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1727465486,   'oauth_token' => 'alMuB4PubTbsqs4Y',   'oauth_verifier' => 'XZ8cCqX5vMti3BMV',   'oauth_version' => '1.0', )
+2024-09-27 21:31:26|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=69ddfb62fe5c3580f7cdd1b49097f37e9c60edb8&oauth_signature=ebBNjkxNRXJJl%2BVDJ5Fr1h8oSCw%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1727465486&oauth_token=alMuB4PubTbsqs4Y&oauth_verifier=XZ8cCqX5vMti3BMV&oauth_version=1.0 
+2024-09-27 21:31:26|DEBUG|[NETWORK] Start fetching url 
+2024-09-27 21:31:26|DEBUG|[NETWORK] Fetch done in: 0.30754494667053 
+2024-09-27 21:31:26|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-09-27 21:31:26|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-09-27 21:38:25|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D27a044171689d56c0b857101038134d8b56df076%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1727465905%26oauth_token%3DWaOXTpgmWGuts5rp%26oauth_verifier%3DVyNralqxwe5SorOE%26oauth_version%3D1.0 
+2024-09-27 21:38:25|DEBUG|[OAUTH] Signature: AAhemtKzDF7ORxJnlBmbjr5bt7Y= 
+2024-09-27 21:38:25|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '27a044171689d56c0b857101038134d8b56df076',   'oauth_signature' => 'AAhemtKzDF7ORxJnlBmbjr5bt7Y=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1727465905,   'oauth_token' => 'WaOXTpgmWGuts5rp',   'oauth_verifier' => 'VyNralqxwe5SorOE',   'oauth_version' => '1.0', )
+2024-09-27 21:38:25|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=27a044171689d56c0b857101038134d8b56df076&oauth_signature=AAhemtKzDF7ORxJnlBmbjr5bt7Y%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1727465905&oauth_token=WaOXTpgmWGuts5rp&oauth_verifier=VyNralqxwe5SorOE&oauth_version=1.0 
+2024-09-27 21:38:25|DEBUG|[NETWORK] Start fetching url 
+2024-09-27 21:38:26|DEBUG|[NETWORK] Fetch done in: 0.28862595558167 
+2024-09-27 21:38:26|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-09-27 21:38:26|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-10-06 18:36:33|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Dc2b7423069653bbd3ce7042b7972783c099c5ed5%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728232593%26oauth_token%3DWOOELEMQYUqsGwdW%26oauth_verifier%3Dv8mEGKImOFYSmKKD%26oauth_version%3D1.0 
+2024-10-06 18:36:33|DEBUG|[OAUTH] Signature: DnnH2JwnBSs8i7EC1TxlkWVGVxo= 
+2024-10-06 18:36:33|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'c2b7423069653bbd3ce7042b7972783c099c5ed5',   'oauth_signature' => 'DnnH2JwnBSs8i7EC1TxlkWVGVxo=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728232593,   'oauth_token' => 'WOOELEMQYUqsGwdW',   'oauth_verifier' => 'v8mEGKImOFYSmKKD',   'oauth_version' => '1.0', )
+2024-10-06 18:36:33|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=c2b7423069653bbd3ce7042b7972783c099c5ed5&oauth_signature=DnnH2JwnBSs8i7EC1TxlkWVGVxo%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728232593&oauth_token=WOOELEMQYUqsGwdW&oauth_verifier=v8mEGKImOFYSmKKD&oauth_version=1.0 
+2024-10-06 18:36:33|DEBUG|[NETWORK] Start fetching url 
+2024-10-06 18:36:33|DEBUG|[NETWORK] Fetch done in: 0.36597394943237 
+2024-10-06 18:36:33|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-10-06 18:36:33|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-10-12 22:49:47|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D07de9c9399600284b9a18174aca463654a848eb5%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728766187%26oauth_token%3DivtGblEjWEQLrIFg%26oauth_verifier%3DTJ2jy7ajBlSNyxLs%26oauth_version%3D1.0 
+2024-10-12 22:49:47|DEBUG|[OAUTH] Signature: 7GuK1yKgJSiorQZEAE5RpQtAT1k= 
+2024-10-12 22:49:47|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '07de9c9399600284b9a18174aca463654a848eb5',   'oauth_signature' => '7GuK1yKgJSiorQZEAE5RpQtAT1k=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728766187,   'oauth_token' => 'ivtGblEjWEQLrIFg',   'oauth_verifier' => 'TJ2jy7ajBlSNyxLs',   'oauth_version' => '1.0', )
+2024-10-12 22:49:47|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=07de9c9399600284b9a18174aca463654a848eb5&oauth_signature=7GuK1yKgJSiorQZEAE5RpQtAT1k%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728766187&oauth_token=ivtGblEjWEQLrIFg&oauth_verifier=TJ2jy7ajBlSNyxLs&oauth_version=1.0 
+2024-10-12 22:49:47|DEBUG|[NETWORK] Start fetching url 
+2024-10-12 22:49:47|DEBUG|[NETWORK] Fetch done in: 0.28976702690125 
+2024-10-12 22:49:47|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-10-12 22:49:47|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-10-13 18:14:13|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D0a964a0c3750990dd1742a991899eefef824f74b%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728836053%26oauth_token%3Db9frO4gTLmHErDww%26oauth_verifier%3DgK82O2ikOWcY5dKG%26oauth_version%3D1.0 
+2024-10-13 18:14:13|DEBUG|[OAUTH] Signature: xrMCsFzj8ORc3lEVKqxm7XElxkc= 
+2024-10-13 18:14:13|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '0a964a0c3750990dd1742a991899eefef824f74b',   'oauth_signature' => 'xrMCsFzj8ORc3lEVKqxm7XElxkc=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728836053,   'oauth_token' => 'b9frO4gTLmHErDww',   'oauth_verifier' => 'gK82O2ikOWcY5dKG',   'oauth_version' => '1.0', )
+2024-10-13 18:14:13|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=0a964a0c3750990dd1742a991899eefef824f74b&oauth_signature=xrMCsFzj8ORc3lEVKqxm7XElxkc%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728836053&oauth_token=b9frO4gTLmHErDww&oauth_verifier=gK82O2ikOWcY5dKG&oauth_version=1.0 
+2024-10-13 18:14:13|DEBUG|[NETWORK] Start fetching url 
+2024-10-13 18:14:13|DEBUG|[NETWORK] Fetch done in: 0.2800018787384 
+2024-10-13 18:14:13|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-10-13 18:14:13|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-10-14 20:50:26|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D21bcce967d2d6677f55aa3d3c8e2de70aeb635cc%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728931826%26oauth_token%3DZFVRo6xsmFoZSpBR%26oauth_verifier%3Dhu8CrY3gyKGNVRlH%26oauth_version%3D1.0 
+2024-10-14 20:50:26|DEBUG|[OAUTH] Signature: NMQ0VP2YjJR1xCQp4xTExI8sU1U= 
+2024-10-14 20:50:26|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '21bcce967d2d6677f55aa3d3c8e2de70aeb635cc',   'oauth_signature' => 'NMQ0VP2YjJR1xCQp4xTExI8sU1U=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728931826,   'oauth_token' => 'ZFVRo6xsmFoZSpBR',   'oauth_verifier' => 'hu8CrY3gyKGNVRlH',   'oauth_version' => '1.0', )
+2024-10-14 20:50:26|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=21bcce967d2d6677f55aa3d3c8e2de70aeb635cc&oauth_signature=NMQ0VP2YjJR1xCQp4xTExI8sU1U%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728931826&oauth_token=ZFVRo6xsmFoZSpBR&oauth_verifier=hu8CrY3gyKGNVRlH&oauth_version=1.0 
+2024-10-14 20:50:26|DEBUG|[NETWORK] Start fetching url 
+2024-10-14 20:50:27|DEBUG|[NETWORK] Fetch done in: 0.29925608634949 
+2024-10-14 20:50:27|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-10-14 20:50:27|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-10-14 21:25:33|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D89555f91497df90b8f592f44d5b38c8464320142%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728933933%26oauth_token%3DVgV7c59avjWJQNVp%26oauth_verifier%3DiesNvhj5dBwKnIa1%26oauth_version%3D1.0 
+2024-10-14 21:25:33|DEBUG|[OAUTH] Signature: Lru9NA/4Rc6zTsuBkxAaLqyhWiY= 
+2024-10-14 21:25:33|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '89555f91497df90b8f592f44d5b38c8464320142',   'oauth_signature' => 'Lru9NA/4Rc6zTsuBkxAaLqyhWiY=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728933933,   'oauth_token' => 'VgV7c59avjWJQNVp',   'oauth_verifier' => 'iesNvhj5dBwKnIa1',   'oauth_version' => '1.0', )
+2024-10-14 21:25:33|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=89555f91497df90b8f592f44d5b38c8464320142&oauth_signature=Lru9NA%2F4Rc6zTsuBkxAaLqyhWiY%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728933933&oauth_token=VgV7c59avjWJQNVp&oauth_verifier=iesNvhj5dBwKnIa1&oauth_version=1.0 
+2024-10-14 21:25:33|DEBUG|[NETWORK] Start fetching url 
+2024-10-14 21:25:33|DEBUG|[NETWORK] Fetch done in: 0.62188982963562 
+2024-10-14 21:25:33|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-10-14 21:25:33|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-10-14 21:54:44|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D447cccfa1326a10fafb7b0fd21c39d8bea52f40b%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728935684%26oauth_token%3Dv3UEEPzlBM1K72yp%26oauth_verifier%3DCGXIFuNVXNLqKLHJ%26oauth_version%3D1.0 
+2024-10-14 21:54:44|DEBUG|[OAUTH] Signature: UYJkCiGd40xCZjnw6RJxREXdMis= 
+2024-10-14 21:54:44|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '447cccfa1326a10fafb7b0fd21c39d8bea52f40b',   'oauth_signature' => 'UYJkCiGd40xCZjnw6RJxREXdMis=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728935684,   'oauth_token' => 'v3UEEPzlBM1K72yp',   'oauth_verifier' => 'CGXIFuNVXNLqKLHJ',   'oauth_version' => '1.0', )
+2024-10-14 21:54:44|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=447cccfa1326a10fafb7b0fd21c39d8bea52f40b&oauth_signature=UYJkCiGd40xCZjnw6RJxREXdMis%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728935684&oauth_token=v3UEEPzlBM1K72yp&oauth_verifier=CGXIFuNVXNLqKLHJ&oauth_version=1.0 
+2024-10-14 21:54:44|DEBUG|[NETWORK] Start fetching url 
+2024-10-14 21:54:44|DEBUG|[NETWORK] Fetch done in: 0.27730703353882 
+2024-10-14 21:54:44|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-10-14 21:54:44|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-10-14 22:16:21|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D6d30ebbd5c8a4b881a92113bf4a4a350d7b27d13%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728936981%26oauth_token%3D4AT1w55EGHHFDVdv%26oauth_verifier%3DFc4Hfgc4LVGyj3PO%26oauth_version%3D1.0 
+2024-10-14 22:16:21|DEBUG|[OAUTH] Signature: p1U/PLroGzZBD730N2G1QuvDJo4= 
+2024-10-14 22:16:21|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '6d30ebbd5c8a4b881a92113bf4a4a350d7b27d13',   'oauth_signature' => 'p1U/PLroGzZBD730N2G1QuvDJo4=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728936981,   'oauth_token' => '4AT1w55EGHHFDVdv',   'oauth_verifier' => 'Fc4Hfgc4LVGyj3PO',   'oauth_version' => '1.0', )
+2024-10-14 22:16:21|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=6d30ebbd5c8a4b881a92113bf4a4a350d7b27d13&oauth_signature=p1U%2FPLroGzZBD730N2G1QuvDJo4%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728936981&oauth_token=4AT1w55EGHHFDVdv&oauth_verifier=Fc4Hfgc4LVGyj3PO&oauth_version=1.0 
+2024-10-14 22:16:21|DEBUG|[NETWORK] Start fetching url 
+2024-10-14 22:16:21|DEBUG|[NETWORK] Fetch done in: 0.26376795768738 
+2024-10-14 22:16:21|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-10-14 22:16:21|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-10-15 15:26:58|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D152e0c0dfd4e89bbabbebae8b30accc4cdce006d%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1728998818%26oauth_token%3DyYJ9erjjdRQHpGE2%26oauth_verifier%3DqiAC8GyGpSilRKWj%26oauth_version%3D1.0 
+2024-10-15 15:26:58|DEBUG|[OAUTH] Signature: 5aRTy1irineHHwgAjj0xirg+/OI= 
+2024-10-15 15:26:58|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '152e0c0dfd4e89bbabbebae8b30accc4cdce006d',   'oauth_signature' => '5aRTy1irineHHwgAjj0xirg+/OI=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1728998818,   'oauth_token' => 'yYJ9erjjdRQHpGE2',   'oauth_verifier' => 'qiAC8GyGpSilRKWj',   'oauth_version' => '1.0', )
+2024-10-15 15:26:58|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=152e0c0dfd4e89bbabbebae8b30accc4cdce006d&oauth_signature=5aRTy1irineHHwgAjj0xirg%2B%2FOI%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1728998818&oauth_token=yYJ9erjjdRQHpGE2&oauth_verifier=qiAC8GyGpSilRKWj&oauth_version=1.0 
+2024-10-15 15:26:58|DEBUG|[NETWORK] Start fetching url 
+2024-10-15 15:26:59|DEBUG|[NETWORK] Fetch done in: 0.30058884620667 
+2024-10-15 15:26:59|DEBUG|[OAUTH] Access token: jlZoHi1PI7Xdp2A7 
+2024-10-15 15:26:59|DEBUG|[OAUTH] Access token secret: QRNH7YigkUj9N5xU 
+2024-11-01 00:22:45|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3D59589cd64920a4e4748a981ce09af330900cc006%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1730416965%26oauth_token%3D9rEOldsejdaJrB4L%26oauth_verifier%3DILYK3YgXjUzDYfRO%26oauth_version%3D1.0 
+2024-11-01 00:22:45|DEBUG|[OAUTH] Signature: 0at+A2TDS7XwuIo+5hYi6nZ4Q2M= 
+2024-11-01 00:22:45|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => '59589cd64920a4e4748a981ce09af330900cc006',   'oauth_signature' => '0at+A2TDS7XwuIo+5hYi6nZ4Q2M=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1730416965,   'oauth_token' => '9rEOldsejdaJrB4L',   'oauth_verifier' => 'ILYK3YgXjUzDYfRO',   'oauth_version' => '1.0', )
+2024-11-01 00:22:45|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=59589cd64920a4e4748a981ce09af330900cc006&oauth_signature=0at%2BA2TDS7XwuIo%2B5hYi6nZ4Q2M%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1730416965&oauth_token=9rEOldsejdaJrB4L&oauth_verifier=ILYK3YgXjUzDYfRO&oauth_version=1.0 
+2024-11-01 00:22:45|DEBUG|[NETWORK] Start fetching url 
+2024-11-01 00:22:46|DEBUG|[NETWORK] Fetch done in: 0.30581498146057 
+2024-11-01 00:22:46|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-11-01 00:22:46|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2024-11-01 00:35:06|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Dcca52c6d0e33a98c81439b8a4ba4c0c8ed8de89a%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1730417706%26oauth_token%3DqbZ76eZs1uKOQ3Dj%26oauth_verifier%3D1j1aLkczVP3sMONw%26oauth_version%3D1.0 
+2024-11-01 00:35:06|DEBUG|[OAUTH] Signature: PAclaDq8XO3tcLksk++A06TQWTY= 
+2024-11-01 00:35:06|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'cca52c6d0e33a98c81439b8a4ba4c0c8ed8de89a',   'oauth_signature' => 'PAclaDq8XO3tcLksk++A06TQWTY=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1730417706,   'oauth_token' => 'qbZ76eZs1uKOQ3Dj',   'oauth_verifier' => '1j1aLkczVP3sMONw',   'oauth_version' => '1.0', )
+2024-11-01 00:35:06|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=cca52c6d0e33a98c81439b8a4ba4c0c8ed8de89a&oauth_signature=PAclaDq8XO3tcLksk%2B%2BA06TQWTY%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1730417706&oauth_token=qbZ76eZs1uKOQ3Dj&oauth_verifier=1j1aLkczVP3sMONw&oauth_version=1.0 
+2024-11-01 00:35:06|DEBUG|[NETWORK] Start fetching url 
+2024-11-01 00:35:06|DEBUG|[NETWORK] Fetch done in: 0.28955793380737 
+2024-11-01 00:35:06|DEBUG|[OAUTH] Access token: 4Ln5X8jeSxMrOlxW 
+2024-11-01 00:35:06|DEBUG|[OAUTH] Access token secret: BQ2XjM7XlJTGw2gC 
+2025-01-04 15:46:15|DEBUG|[OAUTH] Base string: GET&https%3A%2F%2Fchpp.hattrick.org%2Foauth%2Faccess_token.ashx&oauth_consumer_key%3DVrpq4zIU78ySwlrFMvo4nY%26oauth_nonce%3Dcf5789977f8a18dd564f539c5b573954341815a2%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1736001975%26oauth_token%3DZ9m6kHJcrpRNVnnL%26oauth_verifier%3DCqhMB68CX89CPcEl%26oauth_version%3D1.0 
+2025-01-04 15:46:15|DEBUG|[OAUTH] Signature: f1XNlvKAGEOcF3BrNpmgy8gvylo= 
+2025-01-04 15:46:15|DEBUG|[NETWORK] Query params: array (   'oauth_consumer_key' => 'Vrpq4zIU78ySwlrFMvo4nY',   'oauth_nonce' => 'cf5789977f8a18dd564f539c5b573954341815a2',   'oauth_signature' => 'f1XNlvKAGEOcF3BrNpmgy8gvylo=',   'oauth_signature_method' => 'HMAC-SHA1',   'oauth_timestamp' => 1736001975,   'oauth_token' => 'Z9m6kHJcrpRNVnnL',   'oauth_verifier' => 'CqhMB68CX89CPcEl',   'oauth_version' => '1.0', )
+2025-01-04 15:46:15|DEBUG|[NETWORK] Init request: https://chpp.hattrick.org/oauth/access_token.ashx?oauth_consumer_key=Vrpq4zIU78ySwlrFMvo4nY&oauth_nonce=cf5789977f8a18dd564f539c5b573954341815a2&oauth_signature=f1XNlvKAGEOcF3BrNpmgy8gvylo%3D&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1736001975&oauth_token=Z9m6kHJcrpRNVnnL&oauth_verifier=CqhMB68CX89CPcEl&oauth_version=1.0 
+2025-01-04 15:46:15|DEBUG|[NETWORK] Start fetching url 
+2025-01-04 15:46:16|DEBUG|[NETWORK] Fetch done in: 0.21239185333252 
+2025-01-04 15:46:16|DEBUG|[OAUTH] Access token: NLwi7MXans9AT5ih 
+2025-01-04 15:46:16|DEBUG|[OAUTH] Access token secret: phVNIzhP8URoBRwR 

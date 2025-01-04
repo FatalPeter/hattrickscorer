@@ -53,18 +53,19 @@
 	<![endif]-->
 		
 	<!-- captcha -->
-	<script type='text/javascript'>
+	<!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfW3FAqAAAAAK776-GFEm4rdbmsgiea4lOa3cMs"></script> -->
+	<!-- OLD_CAPTCHA <script type='text/javascript'>
     var captchaContainer = null;
     var loadCaptcha = function() {
       captchaContainer = grecaptcha.render('captcha_container', {
-        'sitekey' : '6LerAxYUAAAAAICwy8-jrN7B6dPJpfyU1GppL3Na',
+        'sitekey' : '6LfW3FAqAAAAAK776-GFEm4rdbmsgiea4lOa3cMs',
         'callback' : function(response) {
 			$("#captcha_response").val(response);	
 			$("#form_button2").prop("disabled", false);
         }
       });
     };
-    </script>
+    </script>  -->
 	
 	
 	</head>
@@ -92,6 +93,7 @@
 		<div class="container">
 			<div class="row alert alert-warning" role="alert" style="text-align:center;font-weight:bold;font-size:14px;">
 				<div class="col-sm-12">
+                                        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>TESTING<i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br/><br/>
 					<i class="fa fa-exclamation-triangle" aria-hidden="true"></i><br/>
 					<b>Hattrick Scorer will be discontinued on 2024-02-28</b> - The domain now is hattrickscorer.work.gd<br/><br/>
 					<div style="text-align:left">
@@ -235,6 +237,12 @@
 					?>
 					</div>
 					<div class="col-md-8 border_box">
+						<!-- captcha -->
+						<!-- <script>
+						  function onSubmit(token) {
+						    document.getElementById("register-form").submit();
+						  }
+						</script> -->
 						<form id="register-form" method="post" action="register.php" onsubmit="return validateRegistration()">
 							<div class="input_row input_row100"><div class="title">REGISTER</div></div>
 							<div class="input_row input_row100"><div class="subtitle">Create an account to use Hattrick Scorer. Check the <b>reCaptcha</b> to enable the registration button.</div></div>
@@ -244,10 +252,11 @@
 							<div class="input_row input_row50"><div class="labelf">Re-Password</div><div class="control"><input type="password" name="register_re_password" id="register_re_password" value="" placeholder="re-password" onclick="whiteBackground(this.id);" /></div></div>
 							<input type="hidden" id="captcha_response" value="" />
 							<div class="input_row input_row_50" id="captcha_container"></div>
-							<div class="input_row input_row50"><input type="submit" id="form_button2" class="form_button2" value="Register" disabled="true"/></div>							
+							<div class="input_row input_row50"><input type="submit" id="form_button2" class="form_button2" value="Register"/></div>
+							<!-- <div class="input_row input_row50"><button id="form_button2" class="g-recaptcha" data-sitekey="6LfW3FAqAAAAAK776-GFEm4rdbmsgiea4lOa3cMs" data-callback='onSubmit' data-action='submit'>Submit</button></div> -->
 						</form>
 						<!-- captcha -->
-						<script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha&render=explicit" async defer></script>
+						<!-- <script src="https://www.google.com/recaptcha/api.js?onload=loadCaptcha&render=explicit" async defer></script> -->
 					</div>
 				</div>			
 			</div>

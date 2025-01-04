@@ -121,7 +121,7 @@ class Response extends Xml\File
     public function getResult($index)
     {
         $index = round($index);
-        if ($index > Config\Config::$forIndex && $index < $this->getResultNumber() + Config\Config::$forIndex) {
+        if ($index >= Config\Config::$forIndex && $index < $this->getResultNumber() + Config\Config::$forIndex) {
             $index -= Config\Config::$forIndex;
             $xpath = new \DOMXPath($this->getXml());
             $nodeList = $xpath->query('//Result');
@@ -169,7 +169,7 @@ class Response extends Xml\File
             return null;
         }
         $params = $this->params;
-        $params['pageIndex'] ++;
+        $params['pageIndex']++;
         return Wrapper\Search::search($params);
     }
 
@@ -184,7 +184,7 @@ class Response extends Xml\File
             return null;
         }
         $params = $this->params;
-        $params['pageIndex'] --;
+        $params['pageIndex']--;
         return Wrapper\Search::search($params);
     }
 
@@ -211,6 +211,7 @@ class Response extends Xml\File
         if ($page < 0 || $page >= $this->getTotalPage()) {
             return null;
         }
+        $params = $this->params;
         $params['pageIndex'] = $page;
         return Wrapper\Search::search($params);
     }

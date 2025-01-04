@@ -32,10 +32,10 @@ class Senior extends Xml\HTSupporter
     public function __construct($xml, $id = null)
     {
         parent::__construct($xml);
-        if ($this->xml->getElementsByTagName('Team')->length == 2) {
+        if ($this->xml->getElementsByTagName('Team')->length >= 2) {
             $teams = $this->xml->getElementsByTagName('Team');
             if ($id === null) {
-                for ($t = 0; $t < $teams->length; $t++) {
+                for ($t = $teams->length - 1; $t >= 0; $t--) {
                     $txml = new \DOMDocument('1.0', 'UTF-8');
                     $txml->appendChild($txml->importNode($teams->item($t), true));
                     if (strtolower($txml->getElementsByTagName('IsPrimaryClub')->item(0)->nodeValue) == 'false') {
@@ -43,7 +43,7 @@ class Senior extends Xml\HTSupporter
                     }
                 }
             } else {
-                for ($t = 0; $t < $teams->length; $t++) {
+                for ($t = $teams->length - 1; $t >= 0; $t--) {
                     $txml = new \DOMDocument('1.0', 'UTF-8');
                     $txml->appendChild($txml->importNode($teams->item($t), true));
                     if ($txml->getElementsByTagName('TeamID')->item(0)->nodeValue != $id) {
@@ -92,6 +92,19 @@ class Senior extends Xml\HTSupporter
             return null;
         }
         return $this->getXml()->getElementsByTagName('UserID')->item(1)->nodeValue;
+    }
+
+    /**
+     * Get team's user
+     *
+     * @return \PHT\Xml\User
+     */
+    public function getUser()
+    {
+        if ($this->isDeleted()) {
+            return null;
+        }
+        return Wrapper\User::user($this->getUserId());
     }
 
     /**
@@ -148,6 +161,19 @@ class Senior extends Xml\HTSupporter
             return null;
         }
         return $name;
+    }
+
+    /**
+     * Does the user have its license manager?
+     *
+     * @return boolean
+     */
+    public function hasManagerLicense()
+    {
+        if ($this->isDeleted()) {
+            return null;
+        }
+        return strtolower($this->getXml()->getElementsByTagName('HasManagerLicense')->item(0)->nodeValue) == "true";
     }
 
     /**
@@ -658,6 +684,32 @@ class Senior extends Xml\HTSupporter
             return null;
         }
         return $friendlyTeamId;
+    }
+
+    /**
+     * Return if it's possible to challenge the team for a mid week friendly match
+     *
+     * @return integer
+     */
+    public function isPossibleToChallengeMidweek()
+    {
+        if ($this->isDeleted()) {
+            return false;
+        }
+        return strtolower($this->getXml()->getElementsByTagName('PossibleToChallengeMidweek')->item(0)->nodeValue) == 'true';
+    }
+
+    /**
+     * Return if it's possible to challenge the team for a weekend friendly match
+     *
+     * @return integer
+     */
+    public function isPossibleToChallengeWeekend()
+    {
+        if ($this->isDeleted()) {
+            return false;
+        }
+        return strtolower($this->getXml()->getElementsByTagName('PossibleToChallengeWeekend')->item(0)->nodeValue) == 'true';
     }
 
     /**
@@ -1223,7 +1275,7 @@ class Senior extends Xml\HTSupporter
      * Return challenges, only team belongs to connected user
      *
      * @param boolean $weekendFriendly
-     * @return \PHT\Xml\Team\Challengeable\Listing
+     * @return \PHT\Xml\Team\Challenges
      */
     public function getChallenges($weekendFriendly = false)
     {
@@ -1251,7 +1303,7 @@ class Senior extends Xml\HTSupporter
     }
 
     /**
-     * Return number of national team coached
+     * Return number of national team involved
      *
      * @return integer
      */
